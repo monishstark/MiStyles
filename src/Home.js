@@ -1,7 +1,41 @@
-import React from "react";
+import { Slideshow } from "@mui/icons-material";
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 import Product from "./Product";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+const Slideshows = ({ imgs }) => {
+  const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    setIndex(0);
+  }, []);
+
+  const next = () => {
+    if (index === imgs.length - 1) {
+      setIndex(0);
+    } else {
+      setIndex(index + 1);
+    }
+  };
+  const prev = () => {
+    if (index === 0) {
+      setIndex(imgs.length - 1);
+    } else {
+      setIndex(index - 1);
+    }
+  };
+
+  return (
+    <div className="slideshow">
+      <img className="mainImg" src={imgs[index]} />
+      <div className="actions">
+        <ArrowBackIosIcon onClick={prev} />
+        <ArrowForwardIosIcon onClick={next} />
+      </div>
+    </div>
+  );
+};
 function Home() {
   return (
     <div className="home">
@@ -14,10 +48,10 @@ function Home() {
         <div className="home_row">
           <Product
             id="00001"
-            title="The Two Last Mountains "
-            image="https://matthewreilly.com/wp-content/uploads/2021/10/9781760982416-196x300.jpg"
-            price={200}
-            info="The Two Last Mountains The Brand New Jack West Thriller Paperback by Matthew Reilly"
+            title="Adidas Originals "
+            image="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14790082/2021/12/6/47184c9b-4184-4eba-9a33-bed4b58c69ab1638792339154-ADIDAS-Originals-Men-Tshirts-4161638792338651-1.jpg"
+            price={2000}
+            info="Adidas Originals T-shirt"
           />
           <Product
             id="00002"
@@ -39,35 +73,43 @@ function Home() {
         <div className="home_row">
           <Product
             id="00004"
-            title="Apple iPhone 12 (64GB) - Black"
-            image="https://m.media-amazon.com/images/I/71fVoqRC0wL._AC_UY327_FMwebp_QL65_.jpg"
-            price={57000}
-            info="IPhone 12 64GB Black"
+            title="Adidas"
+            image="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/12906532/2020/12/5/c10f7de5-b42d-4dac-8973-912cc97382401607156433081ShortsADIDASMenShortsADIDASMenShortsAlcisMenShortsAlcisMenTi1.jpg"
+            price={3000}
+            info="Tennis Tee"
           />
           <Product
             id="00005"
-            title="OPPO A53 (Moonlight Black, 4GB RAM, 64GB Storage)
-            OPPO A53 (Moonlight Black, 4GB RAM, 64GB Storage)"
-            image="https://m.media-amazon.com/images/I/31DlTrldSnL._AC_UY327_FMwebp_QL65_.jpg"
-            price={15000}
-            info="	OPPO A53"
+            title="Adidas"
+            image="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16569042/2021/12/21/79fbc3c1-9ca2-4781-ab42-ed2581e610761640075045494ADIDASMenGreenTypographyPrintedAppliqueT-shirt1.jpg"
+            price={1600}
+            info=" Printed T-Shirt"
           />
           <Product
             id="00006"
-            title="Samsung Galaxy Z Fold2 5G Mystic Bronze, 12GB RAM, 256GB Storage"
-            image="https://m.media-amazon.com/images/I/71U9nzW+XsL._AC_UY327_FMwebp_QL65_.jpg"
-            price={135000}
-            info="Galaxy Z Series"
+            title="Nike"
+            image="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16996500/2022/2/16/aa4d2015-1468-4832-90b1-8f0c699c21961645002501820-Nike-Air-Mens-Brushed-Back-Fleece-Crew-7391645002501083-1.jpg"
+            price={4500}
+            info="Nike Sweatshirt"
           />
           <Product
             id="00007"
-            title="Samsung Galaxy S21 FE 5G (Lavender, 8GB, 128GB Storage)"
-            image="https://m.media-amazon.com/images/I/8131pwAojZL._AC_UY327_FMwebp_QL65_.jpg"
-            price={54000}
-            info="Samsung Galaxy S21 FE 5G (Lavender, 8GB, 128GB Storage)"
+            title="Nike akers"
+            image="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15914104/2021/11/11/436392d4-34ca-4f72-99e2-2826ea7aadef1636632876363JacketsDucatiMenJacketsDucatiMenJacketsDucatiMenJacketsDucat1.jpg"
+            price={4200}
+            info="basketball T-shirt"
           />
         </div>
         <div className="home_row">{/*product*/}</div>
+        <div className="slider">
+          <Slideshows
+            imgs={[
+              "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/19/f52556ea-783c-4eab-8bb9-a3b909b634451647665260055-DK-b1g27pm.jpg",
+              "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/c3d08922-f93f-4f7f-9996-e3d2b82bdc621647456798682-Workwear-Collection_Dk.jpg",
+              "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/3/17/52df3f93-8d0f-412d-b416-fc665706199d1647456798690-Casual-Shoes_Dk.jpg",
+            ]}
+          />
+        </div>
       </div>
     </div>
   );
