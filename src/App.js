@@ -7,13 +7,20 @@ import { Switch } from "react-router";
 import Checkout from "./Checkout";
 
 import LoginPage from "./LoginPage";
+import ViewProduct from "./ViewProduct";
+import FloatingButton from "./FloatingButton";
+import Popup from "./Popup";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
+        <FloatingButton />
         <Switch>
+          <Route path="/helpdesk">
+            <Popup />
+          </Route>
           <Route path="/loginpage">
             <LoginPage />
           </Route>

@@ -35,20 +35,9 @@
   background-color: #b8cd42;
 }
 
-.header_optionlineone {
-  font-size: 10px;
-  font-weight: 600;
-  color: rgb(255, 255, 255);
-}
-
-.header_optionlinetwo {
-  font-size: 10px;
-  font-weight: 800;
-  color: rgb(255, 253, 253);
-}
-
 .header_optionBasket {
   display: flex;
+  margin-right: 5px;
 
   color: rgb(255, 253, 253);
 }
@@ -69,7 +58,13 @@
 .header_option {
   display: flex;
   flex-direction: column;
+  margin-top: 7px;
   margin-left: 10px;
   margin-right: 10px;
   color: white;
+}
+
+.options {
+  display: flex;
+  margin-top: 70px;
 }

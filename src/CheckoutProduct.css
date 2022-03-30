@@ -9,6 +9,7 @@
   padding: 10px 20px 10px;
   height: 200px;
   width: 65%;
+  box-shadow: 0 2px 10px 0 rgb(132, 148, 153);
 }
 .checkoutProduct_title {
   font-weight: 700;

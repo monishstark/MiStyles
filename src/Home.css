@@ -11,7 +11,7 @@
   margin-top: 1px;
   margin-left: 200px;
   margin-right: 200px;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   padding-top: -30px;
 }
 
@@ -21,14 +21,16 @@
   margin-bottom: 10px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
-
+.product {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px 0 rgb(136, 154, 160);
+}
 .slider {
-  margin-left: 12%;
-  margin-right: -20%;
+  margin-left: 20px;
 }
 
 .actions button {
-  background: #0000003d;
+  background: #ffffff;
   border: none;
   cursor: pointer;
   padding: 10px;
@@ -39,7 +41,7 @@
 }
 
 .actions button:active {
-  background: #000000a2;
+  background: #ffffff;
   border: none;
   cursor: pointer;
   padding: 10px;
@@ -47,4 +49,38 @@
   margin: 5px;
   border-radius: 15px;
   padding-top: 5px;
+}
+
+.footer {
+  display: flex;
+  bottom: 0;
+  background-color: black;
+  margin-top: 50px;
+  height: 300px;
+  width: 100%;
+  box-shadow: 0 -5px 12px 0 rgb(106, 109, 110);
+  color: #fff;
+}
+.info_c1 {
+  display: block;
+  margin-top: 50px;
+  margin-left: 200px;
+}
+.info_c2 {
+  display: block;
+  margin-top: 50px;
+  margin-left: 80px;
+}
+.info_c3 {
+  display: block;
+  margin-top: 50px;
+  margin-left: 80px;
+}
+.logos {
+  display: block;
+}
+.hovering {
+  display: block;
+  margin-left: 11%;
+  margin-bottom: 30px;
 }

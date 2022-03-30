@@ -5,21 +5,10 @@ import { config } from "./Config";
 import { PublicClientApplication } from "@azure/msal-browser";
 import { Component } from "react";
 import {
-  FacebookLoginButton,
   GoogleLoginButton,
   GithubLoginButton,
-  TwitterLoginButton,
-  AmazonLoginButton,
   InstagramLoginButton,
-  LinkedInLoginButton,
   MicrosoftLoginButton,
-  BufferLoginButton,
-  TelegramLoginButton,
-  AppleLoginButton,
-  DiscordLoginButton,
-  SlackLoginButton,
-  OktaLoginButton,
-  YahooLoginButton,
 } from "react-social-login-buttons";
 
 class LoginPage extends Component {
@@ -68,12 +57,16 @@ class LoginPage extends Component {
           {this.state.isAuthenticated ? (
             <p></p>
           ) : (
-            <p>
-              <MicrosoftLoginButton onClick={() => this.login()} />
-              <GithubLoginButton />
-              <GoogleLoginButton />
-              <InstagramLoginButton />
-            </p>
+            <span className="loginbox">
+              <strong className="title">Welcome to MyStyles</strong>
+              <p className="title2">Login or Signup</p>
+              <p>
+                <MicrosoftLoginButton onClick={() => this.login()} />
+                <GithubLoginButton />
+                <GoogleLoginButton />
+                <InstagramLoginButton />
+              </p>
+            </span>
           )}
         </header>
       </div>
