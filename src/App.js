@@ -10,6 +10,7 @@ import LoginPage from "./LoginPage";
 import ViewProduct from "./ViewProduct";
 import FloatingButton from "./FloatingButton";
 import Popup from "./Popup";
+import Payment from "./Payment";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         <Header />
         <FloatingButton />
         <Switch>
+          <Route path="/payment">
+            <Payment />
+          </Route>
           <Route path="/helpdesk">
             <Popup />
           </Route>

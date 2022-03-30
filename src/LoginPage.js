@@ -55,7 +55,7 @@ class LoginPage extends Component {
       <div className="app">
         <header className="app-header">
           {this.state.isAuthenticated ? (
-            <p></p>
+            <p>Loged in successfully</p>
           ) : (
             <span className="loginbox">
               <strong className="title">Welcome to MyStyles</strong>
